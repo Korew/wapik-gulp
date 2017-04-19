@@ -1,0 +1,63 @@
+.features {
+
+	&-holder {
+		font-size: 0;
+		padding-top: 35px;
+		margin: 0 auto;
+
+	}
+
+	&-card {
+		float: left;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		font-size: 1rem;
+		margin-bottom: 60px;
+
+		&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+			width: 33.33%;
+			margin-bottom: 175px;
+		}
+
+		&:nth-child(1) &-header, &:nth-child(2) &-header, &:nth-child(3) &-header {
+			flex-direction: column;
+		}
+
+		&:nth-child(1) &-icon, &:nth-child(2) &-icon, &:nth-child(3) &-icon {
+			font-size: 52px;
+		}
+
+		&:nth-child(1) &-title, &:nth-child(2) &-title, &:nth-child(3) &-title {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+
+		&:nth-child(1) &-description, &:nth-child(2) &-description, &:nth-child(3) &-description {
+			text-align: center;
+		}
+
+		&-header {
+			display: flex;
+			align-items: center;
+		}
+
+		&-icon {
+			color: #40c249;
+			font-size: 30px;
+
+		}
+
+		&-title {
+			font-size: 16px;
+			line-height: 1.25;
+			color: #0f5f5c;
+			margin-left: 22px;
+
+		}
+
+		&-description {
+			color: #83a7a5;
+		}
+	}
+}

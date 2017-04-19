@@ -1,0 +1,54 @@
+@button-color:       #fff;
+@button-background:  #40c249;
+@button-background-hover:  #79aba6;
+@button-border:      none;
+@button-padding:     4px 16px;
+@button-font-size:   14px;
+@button-font-weight: normal;
+
+.hook-button-misc();
+
+.hook-button() {
+
+	border-radius: 2px;
+	font-family: @font-family-second;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.43;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: @button-background-hover;
+	}
+
+	&-nav {
+		background-color: rgba(255,255,255,.35);
+		margin-left: 15px;
+		font-size: 12px;
+		line-height: 1.75;
+
+		&:hover {
+			background-color: @button-background;
+			color: @button-color;
+		}
+	}
+
+	&-big {
+		padding:15px 45px;
+	}
+
+	&-inverse {
+		background-color: @button-background-hover;
+
+		&:hover {
+			background-color: @button-background;			
+		}		
+	}
+};
+.hook-button-hover() {
+	color: @button-color;
+};
+.hook-button-focus() {};
+.hook-button-active() {};
+.hook-button-misc() {};
+

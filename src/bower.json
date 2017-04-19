@@ -1,0 +1,20 @@
+{
+  "name": "wapik",
+  "homepage": "https://github.com/Korew/wapik",
+  "authors": [
+    "Roman Korenchuk <ikorew@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tajem": "djvang/tajem"
+  }
+}

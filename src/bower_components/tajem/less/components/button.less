@@ -1,0 +1,45 @@
+@button-color:       #000;
+@button-background:  #fff;
+@button-border:      1px solid #ccc;
+@button-padding:     5px 10px;
+@button-font-size:   14px;
+@button-font-weight: normal;
+
+.button {
+	margin: 0;
+	font: inherit;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+	text-decoration: none;
+	user-select: none;
+
+	display: inline-block;
+	padding: @button-padding;
+	color: @button-color;
+	border: @button-border;
+	font-size: @button-font-size;
+	font-weight: @button-font-weight;
+	background: @button-background;
+	.hook-button();
+	&:hover {
+		text-decoration: none;
+		.hook-button-hover();
+	}
+	&:focus {
+		.hook-button-focus();
+	}
+	&:active,
+	&.is-active {
+		.hook-button-active();
+	}
+}
+
+.hook-button-misc();
+
+.hook-button() {};
+.hook-button-hover() {};
+.hook-button-focus() {};
+.hook-button-active() {};
+.hook-button-misc() {};
+
