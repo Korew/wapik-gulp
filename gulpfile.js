@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 		less = require('gulp-less'),
+		sourcemaps = require('gulp-sourcemaps'),
 		csso = require('gulp-csso'),
 		autoprefixer = require('gulp-autoprefixer'),
 		htmlmin = require('gulp-htmlmin'),
@@ -14,6 +15,8 @@ var gulp = require('gulp'),
 
 gulp.task('less', function () {
 	return gulp.src('./src/less/main.less')
+	.pipe(sourcemaps.init())
+	.pipe(sourcemaps.write())
 	.pipe(less({
 		paths: [ path.join(__dirname, 'less', 'includes') ]
 	}))
@@ -76,7 +79,7 @@ gulp.task('clean:dist', function(callback){
 });
 
 gulp.task('build', function (callback) {
-  runSequence(
+  runSequence('clean:dist',
   	['less', 'html', 'images', 'svg', 'font'],
   	callback
   	)
